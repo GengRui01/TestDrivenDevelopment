@@ -28,7 +28,7 @@ TDD 不是一种开发工具,也不是一种测试方法，它是一种编码之
 
     ![HelloWorld测试类](https://github.com/GengRui01/Picture/blob/master/TestDrivenDevelopment/demoTest.png)
 
-    该类有两个特点：
+    该类有三个特点：
     
     1. TestHelloWorld 类是 junit.framework.TestCase 类的实例
     2. 类中有一个以“test”开头且返回值为“void”的方法（图中 testSay() 方法）
