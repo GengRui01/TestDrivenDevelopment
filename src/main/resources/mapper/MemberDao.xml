@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="dao.MemberDao">
+    <insert id="insertMember">
+        insert into member (member_id, username, gender, birthday)
+        values (#{memberId,jdbcType=VARCHAR}, #{username,jdbcType=VARCHAR}, #{gender,jdbcType=INTEGER}, #{birthday,jdbcType=DATE})
+    </insert>
+    <select id="selectMemberById" resultType="domain.entity.Member">
+        select member_id, username, gender, birthday
+        from member
+        where member_id = #{memberId,jdbcType=BIGINT}
+    </select>
+</mapper>

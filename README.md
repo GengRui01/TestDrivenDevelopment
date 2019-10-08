@@ -36,8 +36,20 @@ TDD 不是一种开发工具,也不是一种测试方法，它是一种编码之
 
 2. 编写被测试代码
 
-    ![HelloWorld类](https://github.com/GengRui01/Picture/blob/master/TestDrivenDevelopment/demo.png)
+![HelloWorld类](https://github.com/GengRui01/Picture/blob/master/TestDrivenDevelopment/demo.png)
 
+## 测试驱动开发SpringBoot实践
 
+1. 搭好结构
+
+    ![SpringBoot代码结构](https://github.com/GengRui01/Picture/blob/master/TestDrivenDevelopment/structure.png)
+
+2. Dao 层
+
+    首先写好Dao层测试类
+
+    ![SpringBoot代码结构](https://github.com/GengRui01/Picture/blob/master/TestDrivenDevelopment/daoTest.png)
+    
+    接下来需要按照测试类要求编写Member和MemberDao两个类以驱使测试通过
 
 
