@@ -52,7 +52,9 @@ TDD 不是一种开发工具,也不是一种测试方法，它是一种编码之
     
     接下来需要按照测试类要求编写Member和MemberDao两个类以驱使测试通过
     
-    **tips：在Test中加事务注释可以随意更新表中的数据而不必担心对真是数据造成影响**
+    **tips：在Test中加事务注释可以随意更新表中的数据而不必担心对真是数据造成影响 使用方式如下图所示：**
+
+    ![事务注释](https://github.com/GengRui01/Picture/blob/master/TestDrivenDevelopment/transactional.png)
     
     测试通过后需要去重构代码（这个功能点比较简单 这一步就可以省略啦）
     
