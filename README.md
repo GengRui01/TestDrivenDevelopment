@@ -51,5 +51,9 @@ TDD 不是一种开发工具,也不是一种测试方法，它是一种编码之
     ![SpringBoot代码结构](https://github.com/GengRui01/Picture/blob/master/TestDrivenDevelopment/daoTest.png)
     
     接下来需要按照测试类要求编写Member和MemberDao两个类以驱使测试通过
+    
+    测试通过后需要去重构代码（这个功能点比较简单 这一步就可以省略啦）
+    
+3. Service层
 
 

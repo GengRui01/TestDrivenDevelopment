@@ -3,6 +3,8 @@ package dao;
 import domain.entity.Member;
 import org.apache.ibatis.annotations.Mapper;
 
+import java.util.List;
+
 /**
  * Description:
  *
@@ -14,5 +16,11 @@ import org.apache.ibatis.annotations.Mapper;
 public interface MemberDao {
     int insertMember(Member member);
 
+    int updateMember(Member member);
+
+    int deleteMember(String memberId);
+
     Member selectMemberById(String memberId);
+
+    List<Member> selectAllMember();
 }
