@@ -14,7 +14,7 @@ import org.springframework.transaction.annotation.Transactional;
 import java.util.List;
 
 /**
- * Description: Member持久层测试
+ * Description: Member 持久层测试
  *
  * @ClassName: MemberDaoTest
  * @Author: GengRui
@@ -69,7 +69,7 @@ public class MemberDaoTest extends TestCase {
      */
     @Test
     @Transactional
-    public void testDeleteMember() throws Exception{
+    public void testDeleteMember() throws Exception {
         List<Member> beforeList = memberDao.selectAllMember();
         int count = memberDao.deleteMember("8");
         List<Member> afterList = memberDao.selectAllMember();

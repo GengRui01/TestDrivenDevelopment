@@ -1,9 +1,16 @@
-package domain.entity;
+package domain.vo;
 
-import domain.vo.MemberVo;
+import domain.entity.Member;
 import org.springframework.beans.BeanUtils;
 
-public class Member {
+/**
+ * Description:
+ *
+ * @ClassName: MemberVo
+ * @Author: GengRui
+ * @Date: 2019/10/17 15:07
+ */
+public class MemberVo {
     /**
      * 主键ID
      */
@@ -18,6 +25,7 @@ public class Member {
      * 性别
      */
     private Boolean gender;
+    private String genderName;
 
     /**
      * 生日
@@ -37,7 +45,7 @@ public class Member {
     }
 
     public void setUsername(String username) {
-        this.username = username == null ? null : username.trim();
+        this.username = username;
     }
 
     public Boolean getGender() {
@@ -48,6 +56,14 @@ public class Member {
         this.gender = gender;
     }
 
+    public String getGenderName() {
+        return genderName;
+    }
+
+    public void setGenderName(String genderName) {
+        this.genderName = genderName;
+    }
+
     public String getBirthday() {
         return birthday;
     }
@@ -56,10 +72,10 @@ public class Member {
         this.birthday = birthday;
     }
 
-    public Member(MemberVo memberVo) {
-        BeanUtils.copyProperties(memberVo, this);
+    public MemberVo(Member member) {
+        BeanUtils.copyProperties(member, this);
     }
 
-    public Member() {
+    public MemberVo() {
     }
 }

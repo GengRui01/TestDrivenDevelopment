@@ -48,16 +48,30 @@ TDD 不是一种开发工具,也不是一种测试方法，它是一种编码之
 
     首先写好Dao层测试类
 
-    ![SpringBoot代码结构](https://github.com/GengRui01/Picture/blob/master/TestDrivenDevelopment/daoTest.png)
+    ![Dao层测试类](https://github.com/GengRui01/Picture/blob/master/TestDrivenDevelopment/daoTest.png)
     
     接下来需要按照测试类要求编写Member和MemberDao两个类以驱使测试通过
     
-    **tips：在Test中加事务注释可以随意更新表中的数据而不必担心对真是数据造成影响 使用方式如下图所示：**
+    **tips：在Test中加事务注释可以随意更新表中的数据而不必担心对真实数据造成影响 使用方式如下图所示：**
 
     ![事务注释](https://github.com/GengRui01/Picture/blob/master/TestDrivenDevelopment/transactional.png)
     
     测试通过后需要去重构代码（这个功能点比较简单 这一步就可以省略啦）
     
-3. Service层
+3. Service 层
 
+    Service 层和 Dao 层一样，首先写好测试类
 
+    ![Service层测试类](https://github.com/GengRui01/Picture/blob/master/TestDrivenDevelopment/serviceTest.png)
+
+    接下来编码以保证通过测试
+
+    ![Service层实现类](https://github.com/GengRui01/Picture/blob/master/TestDrivenDevelopment/serviceImpl.png)
+    
+    测试通过后需要去重构代码，可以看到圈出来的部分可以复用，故抽出来一个方法，重构后代码如下：
+
+    ![Service层实现类](https://github.com/GengRui01/Picture/blob/master/TestDrivenDevelopment/serviceRefactor.png)
+    
+    重构后再次测试以保证重构不影响功能实现
+    
+    
