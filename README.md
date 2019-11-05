@@ -29,7 +29,7 @@ TDD 不是一种开发工具,也不是一种测试方法，它是一种编码之
     ![HelloWorld测试类](https://github.com/GengRui01/Picture/blob/master/TestDrivenDevelopment/demoTest.png)
 
     该类有三个特点：
-    
+
     1. TestHelloWorld 类是 junit.framework.TestCase 类的实例
     2. 类中有一个以“test”开头且返回值为“void”的方法（图中 testSay() 方法）
     3. testSay() 方法调用了 assertEquals() 函数，它用来比较预期的值和 HelloWorld.say() 返回的值
@@ -49,15 +49,15 @@ TDD 不是一种开发工具,也不是一种测试方法，它是一种编码之
     首先写好Dao层测试类
 
     ![Dao层测试类](https://github.com/GengRui01/Picture/blob/master/TestDrivenDevelopment/daoTest.png)
-    
+
     接下来需要按照测试类要求编写Member和MemberDao两个类以驱使测试通过
-    
+
     **tips：在Test中加事务注释可以随意更新表中的数据而不必担心对真实数据造成影响 使用方式如下图所示：**
 
     ![事务注释](https://github.com/GengRui01/Picture/blob/master/TestDrivenDevelopment/transactional.png)
-    
+
     测试通过后需要去重构代码（这个功能点比较简单 这一步就可以省略啦）
-    
+
 3. Service 层
 
     Service 层和 Dao 层一样，首先写好测试类
@@ -67,11 +67,18 @@ TDD 不是一种开发工具,也不是一种测试方法，它是一种编码之
     接下来编码以保证通过测试
 
     ![Service层实现类](https://github.com/GengRui01/Picture/blob/master/TestDrivenDevelopment/serviceImpl.png)
-    
+
     测试通过后需要去重构代码，可以看到圈出来的部分可以复用，故抽出来一个方法，重构后代码如下：
 
-    ![Service层实现类](https://github.com/GengRui01/Picture/blob/master/TestDrivenDevelopment/serviceRefactor.png)
-    
+    ![Service层实现类重构后](https://github.com/GengRui01/Picture/blob/master/TestDrivenDevelopment/serviceRefactor.png)
+
     重构后再次测试以保证重构不影响功能实现
-    
-    
+
+4. Controller 层
+
+    所有层级的测试步骤都和 Service 层以及 Dao 层一致，总结TDD的基本步骤如下：
+
+    1. 首先写好测试类
+    2. 接下来编码以保证通过测试
+    3. 测试通过后需要去重构代码
+    4. 重构后再次测试以保证重构不影响功能实现
